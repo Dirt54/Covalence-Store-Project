@@ -4,5 +4,8 @@ angular.module('onlinestore',  ['ngRoute', 'ngResource', 'onlinestore.controller
     .when('/', {
         templateUrl: 'views/welcome.html'
     })
-    .when('/')
+    .when('/product', {
+
+        
+    }
 }])
