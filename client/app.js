@@ -4,8 +4,12 @@ angular.module('onlinestore',  ['ngRoute', 'ngResource', 'onlinestore.controller
     .when('/', {
         templateUrl: 'views/welcome.html'
     })
-    .when('/product', {
-
-        
+    .when('/product/:id', {
+        templateUrl: 'views/product.html',
+        controller: 'SingleProductController'
+    })
+    .when('/purchase', {
+        templateUrl: 'checkout/purchase.html',
+        controller: 'CheckoutPurchaseController'
     }
 }])
