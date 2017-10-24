@@ -11,17 +11,6 @@ var cookieParser = require('cookie-parser');
 
 var prerender = require('prerender-node');
 
-// var pool = mysql.createPool({
-//     connectionLimit: 10,
-//     host: process.env.hostname,
-//     user: process.env.username,
-//     password: process.env.passwordname,
-//     database: process.env.databasename
-// });
-
-// prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
-// app.use(prerender);
-
 app.use(express.static(clientPath));
 app.use(bodyParser.json());
 
