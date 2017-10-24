@@ -37,11 +37,19 @@
                 <li class="nav-link">
                     <a class="nav-misc" href="/misc">MISC</a>
 
-                <li class="nav-link">
-                    <a class="nav-cart" href="/checkout">CART</a>
+                    <li class="nav-link">
+                        <a class="nav-cart" href="/checkout">CART</a>
                     </li>
             </ul>
         </div>
     </nav>
 
+</div>
+
+
+<!-- Below the nav bar -->
+<div class="apparelgear" ng-repeat="p in product">
+<img src="{{ p.imageurl }}" width="150" height="150">
+<h2>{{ p.title }}</h2>
+<p>{{ p.price }}</p>
 </div>

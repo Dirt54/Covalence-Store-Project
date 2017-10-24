@@ -1,5 +1,5 @@
 var express = require('express');
-var products = require('../procedures/products.proc');
+var procedures = require('../procedures/products.proc');
 var auth = require('../middleware/auth.mw');
 
 var router = express.Router();

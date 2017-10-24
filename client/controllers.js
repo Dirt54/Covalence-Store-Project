@@ -6,7 +6,7 @@ angular.module('store.controllers', [])
     }])
 
     .controller('apparelController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService) {
-
+        $scope.product = Products.query();
     }])
 
     .controller('miscController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', function ($scope, Products, Purchases, $location, $routeparams, SEOService) {
