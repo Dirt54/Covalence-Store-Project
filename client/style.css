@@ -1,0 +1,65 @@
+body.wrapper {
+      padding: 0 0 50px 0;
+  }
+ body header {
+      padding: 60px 0;
+      }
+body {
+padding-top: 200px;
+}      
+      
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(201, 63, 63);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+.card {
+    position: relative; 
+    left: 600px;
+}
+
+.bg { 
+    /* The image used */
+    background-image: url("/images/covalence-store-home-copy.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.apparel {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+}
+
+h3{
+    font-family: 'Jomhuria', sans-serif;
+}

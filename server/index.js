@@ -11,17 +11,6 @@ var cookieParser = require('cookie-parser');
 
 var prerender = require('prerender-node');
 
-var pool = mysql.createPool({
-    connectionLimit: 10,
-    host: "",
-    user: "",
-    password: "",
-    database: ""
-});
-
-// prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
-// app.use(prerender);
-
 app.use(express.static(clientPath));
 app.use(bodyParser.json());
 
@@ -53,4 +42,4 @@ app.get('*', function(req, res, next) {
 }); 
 
 
-app.listen(process.env.PORT || 3306);
+app.listen(process.env.PORT || 3000);

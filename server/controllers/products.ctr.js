@@ -1,5 +1,5 @@
 var express = require('express');
-var products = require('../procedures/products.proc');
+var procedures = require('../procedures/products.proc');
 var auth = require('../middleware/auth.mw');
 
 var router = express.Router();
@@ -13,6 +13,17 @@ router.route("/")
     .catch(function(err) {
         console.log(err);
         res.sendStatus(500); 
+    });
+})
+
+router.route("/category/:categoryid")
+.get(function(req, res) {
+    procedures.getProductsByCat(req.params.categoryid)
+    .then(function(Post) {
+        res.send(Post);
+    })
+    .catch(function(err) {
+        res.sendStatus(500);
     });
 })
 
