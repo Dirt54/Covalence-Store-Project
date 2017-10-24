@@ -18,8 +18,11 @@ angular.module('myApp', ['ngRoute', 'ngResource', 'store.controllers', 'store.fa
         templateUrl: 'views/checkout.html',
         controller: 'checkoutController'
     })
-
-    .otherwise({
+    .when('/product/:id', {
+        templateUrl: 'views/product.html',
+        controller: 'SingleProductController'
+    })
+  .otherwise({
         redirectTo: '/'
-    });
+    })
 }]);
