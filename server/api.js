@@ -1,5 +1,6 @@
-var posts = require('./controllers/products.ctrl');
-var users = require('./controllers/purchases.ctrl');
+var posts = require('./controllers/products.ctr');
+var users = require('./controllers/purchases.ctr');
+var express = require('express');
 
 
 
