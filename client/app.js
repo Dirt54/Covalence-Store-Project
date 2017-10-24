@@ -1,11 +1,25 @@
-angular.module('onlinestore',  ['ngRoute', 'ngResource', 'onlinestore.controllers', 'onlinestore'])
-.config(['$routeProvider', function($routeProvider) {
-    $routerProvider
+angular.module('myApp', ['ngRoute', 'ngResource', 'store.controllers', 'store.factories', 'onlinestore.services'])
+.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
+    $routeProvider
     .when('/', {
-        templateUrl: 'views/welcome.html'
+        templateUrl: 'views/welcome.html',
+        controller: 'welcomeController'
     })
-    .when('/product', {
+    .when('/apparel', {
+        templateUrl: 'views/apparel.html',
+        controller: 'apparelController'
+    })
+    .when('/misc', {
+        templateUrl: 'views/misc.html',
+        controller: 'miscController'
+    })
+    .when('/checkout', {
+        templateUrl: 'views/checkout.html',
+        controller: 'checkoutController'
+    })
 
-        
-    }
-}])
+    .otherwise({
+        redirectTo: '/'
+    });
+}]);
