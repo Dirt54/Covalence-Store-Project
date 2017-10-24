@@ -49,3 +49,7 @@ li a:hover {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.apparel {
+    display: inline;
+}
