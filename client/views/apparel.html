@@ -48,10 +48,10 @@
 
 
 <!-- Below the nav bar -->
-<div class="apparel">
-    <div class="apparelgear" ng-repeat="p in product">
+
+    <div class="apparel" ng-repeat="p in product">
         <img src="{{ p.imageurl }}" width="150" height="150">
-        <h2>{{ p.title }}</h2>
-        <p>{{ p.price }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>${{ p.price }}</p>
     </div>
 </div>

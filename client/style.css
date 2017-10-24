@@ -53,4 +53,13 @@ li a:hover {
 .apparel {
     display: inline-block;
     margin: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+}
+
+h3{
+    font-family: 'Jomhuria', sans-serif;
 }
