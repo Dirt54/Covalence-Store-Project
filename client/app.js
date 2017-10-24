@@ -22,7 +22,7 @@ angular.module('onlinestore', ['ngRoute', 'ngResource', 'store.controllers', 'st
         templateUrl: 'views/product.html',
         controller: 'SingleProductController'
     })
-  .otherwise({
-        redirectTo: '/'
-    })
+//   .otherwise({
+//         redirectTo: '/'
+//     })
 }]);
