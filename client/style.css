@@ -32,3 +32,20 @@ li a {
 li a:hover {
     background-color: #111;
 }
+.card {
+    position: relative; 
+    left: 600px;
+}
+
+.bg { 
+    /* The image used */
+    background-image: url("/images/covalence-store-home-copy.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
