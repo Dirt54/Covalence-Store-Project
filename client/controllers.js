@@ -7,10 +7,18 @@ angular.module('store.controllers', [])
 
     .controller('apparelController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService) {
         $scope.product = Products.queryByCategory({ categoryid: 1 });
+
+        $scope.singleRead = function (x) {
+            $location.path('/product/' + x);
+        }
     }])
 
     .controller('miscController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', function ($scope, Products, Purchases, $location, $routeparams, SEOService) {
         $scope.product = Products.queryByCategory({ categoryid: 2 });
+
+        $scope.singleRead = function (x) {
+            $location.path('/product/' + x);
+        }
     }])
 
     .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService) {
@@ -18,6 +26,6 @@ angular.module('store.controllers', [])
     }])
 
 
-    .controller('SingleProductController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService) {
-
+    .controller('SingleProductController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', function ($scope, Products, Purchases, $location, $routeParams,  SEOService) {
+        $scope.product = Products.get({ id: $routeParams.id });
     }]);

@@ -59,7 +59,7 @@ li a:hover {
 
 .apparel {
     display: inline-block;
-    margin: 10px;
+    margin: 50px;
     text-align: center;
 }
 
@@ -68,5 +68,6 @@ h1 {
 }
 
 h3{
-    font-family: 'Jomhuria', sans-serif;
+    font-family: 'Gurajada';
+    
 }
