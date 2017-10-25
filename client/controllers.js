@@ -36,6 +36,15 @@ angular.module('store.controllers', [])
                 }
             }
         
+            $scope.getTotal = function() {
+                var total = 0;
+                for(var i = 0; i < $scope.shoppingCart.length; i++) {
+                    var prod = $scope.shoppingCart[i];
+                    total += (prod.price);
+                }
+                return total;
+            }
+
 
     }])
 
