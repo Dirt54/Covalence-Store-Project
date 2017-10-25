@@ -8,3 +8,7 @@ angular.module('onlinestore.services', [])
         }    
     }
 }])
+
+.service('CheckoutService', function() {
+    this.checkoutItems = [];
+});
