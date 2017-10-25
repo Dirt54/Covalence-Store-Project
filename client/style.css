@@ -45,6 +45,9 @@ li a:hover {
 
 }
 
+.card-title {
+    color: black;
+}
 .div1{ 
     /* The image used */
     background-image: url("/images/covalence-store-home-copy.jpg");
