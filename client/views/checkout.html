@@ -3,18 +3,19 @@
         <img src="images/logo.svg" alt="logo" />
         <h1>Checkout</h1>
     </div>
-   
+
 
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <!-- Just an image -->
         <a class="navbar-brand" href="#">
                 <img src="images/logo.svg" width="163" height="55" alt="logo">
             </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                
+                <span class="navbar-toggler-icon"></span>    
             </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -23,14 +24,16 @@
                         </a>
                 </li>
             </ul>
+        </div>
     </nav>
 
 
 
-                <div ng-repeat="s in shoppingCart">
-                    <img src="{{ s.imageurl }}" width="150" height="150">
-                    <h3>{{ s.title }}</h3>
-                    <p>${{ s.price }}</p>
-                    <button ng-click="deleteItem(shoppingCart, s)">Delete</button>
-                </div>
-        </div>
+    <div ng-repeat="s in shoppingCart">
+        <img src="{{ s.imageurl }}" width="150" height="150">
+        <h3>{{ s.title }}</h3>
+        <p>${{ s.price }}</p>
+        <button ng-click="deleteItem(shoppingCart, s)">Delete</button>
+    </div>
+
+</div>
