@@ -29,11 +29,15 @@
                             <!-- <span class="sr-only">(current)</span> -->
                         </a>
                 </li>
+            </ul>
 
 
-                <div ng-repeat="s in shoppingCart">
-                    <img src="{{ s.imageurl }}" width="150" height="150">
-                    <h3>{{ s.title }}</h3>
-                    <p>${{ s.price }}</p>
-                </div>
+            
+            <div class="apparel">
+            <div ng-repeat="s in shoppingCart">
+                <img src="{{ s.imageurl }}" width="150" height="150">
+                <h3>{{ s.title }}</h3>
+                <p>${{ s.price }}</p>
+            </div>
+            </div>
         </div>
