@@ -2,7 +2,7 @@ body.wrapper {
       padding: 0 0 50px 0;
   }
  body header {
-      padding: 60px 0;
+      padding: 1px 0;
       }
 
 body {
@@ -38,6 +38,7 @@ li a:hover {
 .card {
     position: relative; 
     left: 2px;
+
 }
 
 .div1{ 
@@ -61,6 +62,9 @@ li a:hover {
     display: inline-block;
     margin: 50px;
     text-align: center;
+}
+shopping {
+
 }
 
 h1 {
