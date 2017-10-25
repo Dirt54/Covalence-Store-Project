@@ -16,6 +16,17 @@ router.route("/")
     });
 })
 
+router.route("/category/:categoryid")
+.get(function(req, res) {
+    procedures.getProductsByCat(req.params.categoryid)
+    .then(function(Post) {
+        res.send(Post);
+    })
+    .catch(function(err) {
+        res.sendStatus(500);
+    });
+})
+
 router.route("/:id")
 .get(function(req, res) {
     procedures.singleProduct(req.params.id)

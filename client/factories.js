@@ -1,7 +1,13 @@
 angular.module('store.factories', [])
 
     .factory('Products', ['$resource', function ($resource) {
-        return $resource('/api/products/:id');
+        return $resource('/api/products/:id', { id: '@id' }, {
+            queryByCategory: {
+                method: 'GET',
+                url: '/api/products/category/:categoryid',
+                isArray: true
+            }
+        });
     }])
 
 
