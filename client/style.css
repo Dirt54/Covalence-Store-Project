@@ -38,6 +38,7 @@ li a:hover {
 .card {
     position: relative; 
     left: 2px;
+
 }
 
 .div1{ 
@@ -61,6 +62,9 @@ li a:hover {
     display: inline-block;
     margin: 50px;
     text-align: center;
+}
+shopping {
+
 }
 
 h1 {
