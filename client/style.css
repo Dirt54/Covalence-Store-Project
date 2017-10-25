@@ -23,6 +23,10 @@ li {
     float: left;
 }
 
+.button-block {
+    margin-bottom: 35px;
+}
+
 #nav{
     display: block;
     color: rgb(201, 63, 63);
@@ -63,9 +67,7 @@ li a:hover {
     margin: 50px;
     text-align: center;
 }
-shopping {
 
-}
 
 h1 {
     font-family: 'Anton', sans-serif;
