@@ -1,10 +1,10 @@
 <div class="wrapper container">
-        <div class="header">
-            <img src="images/logo.svg" alt="logo" />
-            <h1>Checkout</h1>
-        </div>
-        <header> </header>
-        <!-- 
+    <div class="header">
+        <img src="images/logo.svg" alt="logo" />
+        <h1>Checkout</h1>
+    </div>
+    <header> </header>
+    <!-- 
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
         <li><img src="logo.svg" alt="logo" /></li>
@@ -12,20 +12,28 @@
         <li><a href="/misc/">MISC</a></li>
         <li><a href="/cart/">Cart</a></li>
       </ul> -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <!-- Just an image -->
-            <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <!-- Just an image -->
+        <a class="navbar-brand" href="#">
                 <img src="images/logo.svg" width="163" height="224" alt="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">HOME
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">HOME
                             <!-- <span class="sr-only">(current)</span> -->
                         </a>
-                    </li>
+                </li>
+
+
+                <div ng-repeat="s in shoppingCart">
+                    <img src="{{ s.imageurl }}" width="150" height="150">
+                    <h3>{{ s.title }}</h3>
+                    <p>${{ s.price }}</p>
+                </div>
+        </div>

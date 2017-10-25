@@ -21,11 +21,32 @@ angular.module('store.controllers', [])
         }
     }])
 
-    .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService) {
+    .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService, CheckoutService) {
+        $scope.product = Products.query();
+        
+        
+            $scope.shoppingCart = CheckoutService.checkoutItems;
+        
 
     }])
 
 
-    .controller('SingleProductController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', function ($scope, Products, Purchases, $location, $routeParams,  SEOService) {
+    .controller('SingleProductController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeParams,  SEOService, CheckoutService) {
         $scope.product = Products.get({ id: $routeParams.id });
+
+        $scope.addToCart = function(id, imageurl, title, price) {
+            var payload = {
+                id: id,
+                imageurl: imageurl,
+                title: title,
+                price:  price
+            }
+
+            CheckoutService.checkoutItems.push(payload);
+             console.log(CheckoutService.checkoutItems);
+        }
+          
+       
+
+        
     }]);
