@@ -27,6 +27,14 @@ angular.module('store.controllers', [])
             
         
             $scope.shoppingCart = CheckoutService.checkoutItems;
+
+            $scope.deleteItem = function(array, element) {
+                if (confirm('Are you sure you want to delete this item?')) {
+                      const index = array.indexOf(element);
+                    array.splice(index, 1);
+                  
+                }
+            }
         
 
     }])
