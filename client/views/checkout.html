@@ -26,11 +26,12 @@
     </nav>
 
 
-
+            <div id="checkoutScroll">
                 <div ng-repeat="s in shoppingCart">
                     <img src="{{ s.imageurl }}" width="150" height="150">
                     <h3>{{ s.title }}</h3>
                     <p>${{ s.price }}</p>
                     <button ng-click="deleteItem(shoppingCart, s)">Delete</button>
                 </div>
+            </div>
         </div>
