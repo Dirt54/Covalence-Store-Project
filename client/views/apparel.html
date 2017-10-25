@@ -3,15 +3,7 @@
         <img src="images/logo.svg" alt="logo" />
         <h1>Apparel</h1>
     </div>
-    <header> </header>
-    <!-- 
-<nav class="navbar navbar-default">
-  <ul class="nav navbar-nav">
-    <li><img src="logo.svg" alt="logo" /></li>
-    <li style="float:right"><a class="active"></a><a href="/apparel/">APPAREL</a></li>
-    <li><a href="/misc/">MISC</a></li>
-    <li><a href="/cart/">Cart</a></li>
-  </ul> -->
+   
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <!-- Just an image -->
         <a class="navbar-brand" href="#">
@@ -31,15 +23,16 @@
                 </li>
 
                 <li class="nav-item active">
-                        <a class="nav-link" id="nav"  href="/apparel">APPAREL</a>
-                    </li>
+                    <a class="nav-link" id="nav" href="/apparel">APPAREL</a>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link" id="nav" href="/misc">MISC</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" id="nav" href="/checkout">CART</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav" href="/checkout">CART</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -49,9 +42,11 @@
 
 <!-- Below the nav bar -->
 
-    <div class="apparel" ng-repeat="p in product" ng-click="singleRead(p.id)">
-        <img src="{{ p.imageurl }}" width="150" height="150">
-        <h3>{{ p.title }}</h3>
-        <p>${{ p.price }}</p>
-    </div>
+
+<div class="apparel" ng-repeat="p in product" ng-click="singleRead(p.id)">
+    <img src="{{ p.imageurl }}" width="150" height="150">
+    <h3>{{ p.title }}</h3>
+    <p>${{ p.price }}</p>
+</div>
+
 </div>

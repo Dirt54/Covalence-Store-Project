@@ -23,6 +23,10 @@ li {
     float: left;
 }
 
+.button-block {
+    margin-bottom: 35px;
+}
+
 #nav{
     display: block;
     color: rgb(201, 63, 63);
@@ -38,6 +42,7 @@ li a:hover {
 .card {
     position: relative; 
     left: 2px;
+
 }
 
 .div1{ 
@@ -63,6 +68,7 @@ li a:hover {
     text-align: center;
 }
 
+
 h1 {
     font-family: 'Anton', sans-serif;
 }
@@ -70,4 +76,9 @@ h1 {
 h3{
     font-family: 'Gurajada';
     
+}
+
+#checkoutScroll {
+    overflow-y: auto;
+    height: auto;
 }
