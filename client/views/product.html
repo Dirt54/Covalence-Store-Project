@@ -3,18 +3,10 @@
         <img src="images/logo.svg" alt="logo" />
         <h1>Apparel</h1>
     </div>
-    <header> </header>
-    <!-- 
-    <nav class="navbar navbar-default">
-      <ul class="nav navbar-nav">
-        <li><img src="logo.svg" alt="logo" /></li>
-        <li style="float:right"><a class="active"></a><a href="/apparel/">APPAREL</a></li>
-        <li><a href="/misc/">MISC</a></li>
-        <li><a href="/cart/">Cart</a></li>
-      </ul> -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <!-- Just an image -->
-            <a class="navbar-brand" href="#">
+    
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <!-- Just an image -->
+        <a class="navbar-brand" href="#">
                 <img src="images/logo.svg" width="163" height="55" alt="logo">
             </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -25,21 +17,22 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">HOME
+                    <a class="nav-link" id="nav" href="/">HOME
                             <span class="sr-only">(current)</span>
                         </a>
                 </li>
 
                 <li class="nav-link">
-                    <a class="nav-apparel" href="/apparel">APPAREL</a>
+                    <a class="nav-apparel" id="nav" href="/apparel">APPAREL</a>
                 </li>
 
                 <li class="nav-link">
-                    <a class="nav-misc" href="/misc">MISC</a>
+                    <a class="nav-misc" id="nav" href="/misc">MISC</a>
+                </li>
 
-                    <li class="nav-link">
-                        <a class="nav-cart" href="/checkout">CART</a>
-                    </li>
+                <li class="nav-link">
+                    <a class="nav-cart" id="nav" href="/checkout">CART</a>
+                </li>
             </ul>
         </div>
     </nav>
