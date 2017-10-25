@@ -50,14 +50,15 @@
     <!-- below the navbar -->
 
         <div >
+            <div class="apparel">
                 <img src="{{ product.imageurl }}" width="150" height="150">
             <p cols="50" rows="10">{{ product.description }}</p>
-            <h4>{{ product.title }}</h4>
-            <h4>{{ product.price }}</h4>
-          
+            <h3>{{ product.title }}</h3>
+            <p>${{ product.price }}</p>
+        </div>
 
             <div class="button-block">
-                    <!-- <button class="deletebtn" ng-click="deletePost()">Delete</button> -->
+                    <button class="addtocartbtn" ng-click="addToCart(product.id, product.imageurl, product.title, product.price)">Add To Cart</button>
                 </div>
 
         </div>
