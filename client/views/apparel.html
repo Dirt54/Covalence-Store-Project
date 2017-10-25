@@ -49,7 +49,7 @@
 
 <!-- Below the nav bar -->
 
-    <div class="apparel" ng-repeat="p in product">
+    <div class="apparel" ng-repeat="p in product" ng-click="singleRead(p.id)">
         <img src="{{ p.imageurl }}" width="150" height="150">
         <h3>{{ p.title }}</h3>
         <p>${{ p.price }}</p>
