@@ -5,8 +5,7 @@ body.wrapper {
       padding: 1px 0;
       }
 
-body {
-    
+body { 
 padding-top: 80px;
 /* color: white; */
 }      
@@ -73,6 +72,7 @@ li a:hover {
 
 h1 {
     font-family: 'Anton', sans-serif;
+    margin-right: 10px;
 }
 
 h3 {
