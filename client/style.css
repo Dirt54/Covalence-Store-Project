@@ -27,7 +27,7 @@ li {
     display: block;
     color: rgb(201, 63, 63);
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 16px;
     text-decoration: none;
 }
 
@@ -38,6 +38,7 @@ li a:hover {
 .card {
     position: relative; 
     left: 2px;
+    color: rgb(37, 117, 163)
 
 }
 
@@ -48,15 +49,16 @@ li a:hover {
     /* Full height */
     height: 100%; 
     width: 100%;
-    border:1px solid black;
+    /* border:1px solid black; */
     /* Center and scale the image nicely */
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
-    padding: 30px;
+    color: rgb(108, 147, 187);
+    padding: 200px;
 }
+
 
 .apparel {
     display: inline-block;
