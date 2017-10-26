@@ -21,7 +21,7 @@ angular.module('store.controllers', [])
         }
     }])
 
-    .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService, CheckoutService) {
+    .controller('cartController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService, CheckoutService) {
         $scope.product = Products.query();
        
             
@@ -45,6 +45,10 @@ angular.module('store.controllers', [])
                 return total;
             }
 
+            $scope.gotocheckbtn = function() {
+                $location.path('/checkout');
+            }
+
 
     }])
 
@@ -65,6 +69,66 @@ angular.module('store.controllers', [])
         }
           
        
+
+        
+    }])
+
+    .controller('checkoutController', ['$scope', 'Products', 'Purchases', 'CreatePayments', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, CreatePayments, $location, $routeParams,  SEOService, CheckoutService) {
+        $scope.product = Products.query();
+        
+        
+             
+         
+             $scope.shoppingCart = CheckoutService.checkoutItems;
+
+
+        $scope.getTotal = function() {
+            var total = 0;
+            for(var i = 0; i < $scope.shoppingCart.length; i++) {
+                var prod = $scope.shoppingCart[i];
+                total += (prod.price);
+            }
+            return total;
+        }
+       
+
+
+        var elements = stripe.elements();
+        var card = elements.create('card');
+        card.mount('#card-field');
+    
+        $scope.errorMessage = '';
+
+        $scope.stripeCharge = function() {
+            stripe.createToken(card, {
+                name: $scope.name,
+                address_line1: $scope.line1,
+                address_line2: $scope.line2,
+                address_city: $scope.city,
+                address_state: $scope.state
+            }).then(function(result) {
+                if (result.error) {
+                    $scope.errorMessage = result.error.message;
+                } else {
+                    // result.token is the card token (need id property)
+                    var shoppingCart = CheckoutService.checkoutItems;
+
+                    var c = new CreatePayments({
+                        token: result.token.id,
+                        amount: $scope.getTotal(),
+                        cart: shoppingCart
+                    });
+                    
+                    c.$save(function() {
+                        alert('Thank you for the payment, an email has been sent.');
+                        $location.path('/');
+                    }, function(err) {
+                        console.log(err);
+                    });
+                }
+            });
+        }
+
 
         
     }]);
