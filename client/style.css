@@ -6,7 +6,7 @@ body.wrapper {
       }
 
 body { 
-padding-top: 80px;
+/* padding-top: 80px; */
 /* color: white; */
 }      
       
@@ -95,16 +95,24 @@ h3 {
     
     .jumbotron{
 
-        background:url('/images/covalence-store-apparel-hero.jpg');
+        background-image:url('/images/covalence-store-apparel-hero.jpg');
         background-size:cover;
-        background-position:center;
-        padding-top:100px;
-        padding-bottom:50px;
+        background-position:relative;
+         /* padding-top:0px;  */
+        /* padding-bottom:50px;  */
         position: center;
-        height: 150%; 
+        height: 200px;
+        /* height: 150%; 
         width: 150%;
-        left: 200px;
+        left: 200px; */
     }
+.jumbotron-d{
+    background-image:url('/images/covalence-store-misc-hero.jpg');
+    background-size:cover;
+    background-position:relative;
+    position: relative;
+    height: 200px;
+}
     
 
 .my-form {
