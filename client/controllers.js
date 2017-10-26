@@ -27,7 +27,24 @@ angular.module('store.controllers', [])
             
         
             $scope.shoppingCart = CheckoutService.checkoutItems;
+
+            $scope.deleteItem = function(array, element) {
+                if (confirm('Are you sure you want to delete this item?')) {
+                      const index = array.indexOf(element);
+                    array.splice(index, 1);
+                  
+                }
+            }
         
+            $scope.getTotal = function() {
+                var total = 0;
+                for(var i = 0; i < $scope.shoppingCart.length; i++) {
+                    var prod = $scope.shoppingCart[i];
+                    total += (prod.price);
+                }
+                return total;
+            }
+
 
     }])
 

@@ -1,64 +1,57 @@
-
 <div class="wrapper container">
-        <div class="header">
-            <img src="images/logo.svg" alt="logo" />
-            <h1>Apparel</h1>
-        </div>
-        <header> </header>
-        <!-- 
-    <nav class="navbar navbar-default">
-      <ul class="nav navbar-nav">
-        <li><img src="logo.svg" alt="logo" /></li>
-        <li style="float:right"><a class="active"></a><a href="/apparel/">APPAREL</a></li>
-        <li><a href="/misc/">MISC</a></li>
-        <li><a href="/cart/">Cart</a></li>
-      </ul> -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <!-- Just an image -->
-            <a class="navbar-brand" href="#">
+    <div class="header">
+        <img src="images/logo.svg" alt="logo" />
+        <h1>Apparel</h1>
+    </div>
+    
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <!-- Just an image -->
+        <a class="navbar-brand" href="#">
                 <img src="images/logo.svg" width="163" height="55" alt="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-                aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">HOME
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="nav" href="/">HOME
                             <span class="sr-only">(current)</span>
                         </a>
-                    </li>
-    
-                    <li class="nav-link">
-                        <a class="nav-apparel" href="/apparel">APPAREL</a>
-                    </li>
-    
-                    <li class="nav-link">
-                        <a class="nav-misc" href="/misc">MISC</a>
-    
-                        <li class="nav-link">
-                            <a class="nav-cart" href="/checkout">CART</a>
-                        </li>
-                </ul>
-            </div>
-        </nav>
-    
-    </div>
+                </li>
+
+                <li class="nav-link">
+                    <a class="nav-apparel" id="nav" href="/apparel">APPAREL</a>
+                </li>
+
+                <li class="nav-link">
+                    <a class="nav-misc" id="nav" href="/misc">MISC</a>
+                </li>
+
+                <li class="nav-link">
+                    <a class="nav-cart" id="nav" href="/checkout">CART</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
 
     <!-- below the navbar -->
 
-        <div >
-            <div class="apparel">
-                <img src="{{ product.imageurl }}" width="150" height="150">
+    <div>
+        <div class="apparel">
+            <img src="{{ product.imageurl }}" width="150" height="150">
             <p cols="50" rows="10">{{ product.description }}</p>
             <h3>{{ product.title }}</h3>
             <p>${{ product.price }}</p>
         </div>
 
-            <div class="button-block">
-                    <button class="addtocartbtn" ng-click="addToCart(product.id, product.imageurl, product.title, product.price)">Add To Cart</button>
-                </div>
-
+        <div class="button-block">
+            <button class="addtocartbtn" ng-click="addToCart(product.id, product.imageurl, product.title, product.price)">Add To Cart</button>
         </div>
+
+    </div>
+</div>
