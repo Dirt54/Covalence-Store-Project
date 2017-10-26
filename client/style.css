@@ -89,3 +89,17 @@ h3 {
     left: 470px;
     font-size: 200%;
 }
+    
+    .jumbotron{
+
+        background:url('/images/covalence-store-apparel-hero.jpg');
+        background-size:cover;
+        background-position:center;
+        padding-top:100px;
+        padding-bottom:50px;
+        position: center;
+        height: 150%; 
+        width: 150%;
+        left: 200px;
+    }
+    
