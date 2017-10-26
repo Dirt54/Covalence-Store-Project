@@ -1,45 +1,39 @@
 <div class="wrapper container">
-    <div class="header">
-        <img src="images/logo.svg" alt="logo" />
-        <h1>Checkout</h1>
-    </div>
-
-
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
-        <!-- Just an image -->
-        <a class="navbar-brand" href="#">
-                <img src="images/logo.svg" width="163" height="55" alt="logo">
-            </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-            aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>    
-            </button>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"> 
-                    <a class="nav-link" id="nav" href="/">HOME
-                            <span class="sr-only">(current)</span>
-                           
-                        </a>
-                <li>
-                <img src= "images/paypal.png" width= "55" length "15"  alt="paypal">
-                <img src= "images/american-express.png" width= "55" length "15" alt="AmerExpress">
-                <img src="images/visa.png"   width= "55" length "15"  alt="visa"> 
-            </li>
-            </ul>
+        <div class="header">
+            <img src="images/logo.svg" alt="logo" />
+            <h1>Checkout</h1>
         </div>
-    </nav>
-
     
-            <div id="checkoutScroll">
-                <div ng-repeat="s in shoppingCart">
-                    <img src="{{ s.imageurl }}" width="150" height="150">
-                    <h3>{{ s.title }}</h3>
-                    <p>${{ s.price }}</p>
-                    <button ng-click="deleteItem(shoppingCart, s)">Delete</button>
-                </div>
+    
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+            <!-- Just an image -->
+            <a class="navbar-brand" href="#">
+                    <img src="images/logo.svg" width="163" height="55" alt="logo">
+                </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>    
+                </button>
+    
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> 
+                        <a class="nav-link" id="nav" href="/">HOME
+                                <span class="sr-only">(current)</span>
+                               
+                            </a>
+                    <li>
+                    <img src= "images/paypal.png" width= "55" length "15"  alt="paypal">
+                    <img src= "images/american-express.png" width= "55" length "15" alt="AmerExpress">
+                    <img src="images/visa.png"   width= "55" length "15"  alt="visa"> 
+                </li>
+                </ul>
             </div>
-            <div id="costdiv">Total Cost: ${{ getTotal() }}</div>
-        </div>
+        </nav>
+
+
+
+        <!-- below the navbar -->
+
+<p>CHECKOUT PAGE</p>
