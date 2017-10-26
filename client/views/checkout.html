@@ -97,13 +97,17 @@
             <input type="submit" class="submit" value="Submit Payment">
           </form> -->
 
-          <form class="my-form" ng-submit="processDonation()"> 
-              <div>Total: ${{ getTotal() }}</div>
+          <form class="my-form" ng-submit="stripeCharge()"> 
+              <div ng-model="amount">Total: ${{ getTotal() }}</div>
         
                 <div class="form-group">
                     <label for="card-field">Credit Card</label>
                     <div class="form-control" id="card-field"></div>
                 </div>
+                <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" type="text" placeholder="Email" ng-model="email">
+                    </div>
                 <div class="form-group">
                     <label>Billing Address</label>
                     <input class="form-control" type="text" placeholder="Cardholder Name" ng-model="name">
