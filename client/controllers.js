@@ -21,7 +21,7 @@ angular.module('store.controllers', [])
         }
     }])
 
-    .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService, CheckoutService) {
+    .controller('cartController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams',  'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeparams,  SEOService, CheckoutService) {
         $scope.product = Products.query();
        
             
@@ -45,6 +45,10 @@ angular.module('store.controllers', [])
                 return total;
             }
 
+            $scope.gotocheckbtn = function() {
+                $location.path('/checkout');
+            }
+
 
     }])
 
@@ -63,6 +67,14 @@ angular.module('store.controllers', [])
             CheckoutService.checkoutItems.push(payload);
              console.log(CheckoutService.checkoutItems);
         }
+          
+       
+
+        
+    }])
+
+    .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeParams,  SEOService, CheckoutService) {
+    
           
        
 

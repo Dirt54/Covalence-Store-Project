@@ -14,6 +14,10 @@ angular.module('onlinestore', ['ngRoute', 'ngResource', 'store.controllers', 'st
         templateUrl: 'views/misc.html',
         controller: 'miscController'
     })
+    .when('/cart', {
+        templateUrl: 'views/cart.html',
+        controller: 'cartController'
+    })
     .when('/checkout', {
         templateUrl: 'views/checkout.html',
         controller: 'checkoutController'
