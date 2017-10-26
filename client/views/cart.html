@@ -38,11 +38,15 @@
                     <img src="{{ s.imageurl }}" width="150" height="150">
                     <h3>{{ s.title }}</h3>
                     <p>${{ s.price }}</p>
-                    <button ng-click="deleteItem(shoppingCart, s)">Delete</button>
+                    <button type="button" class="btn btn-danger btn-lg" ng-click="deleteItem(shoppingCart, s)">Delete 
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
             <div id="costdiv">
-            <div>Total Cost: ${{ getTotal() }}</div>
-            <button ng-click="gotocheckbtn()">Proceed to Checkout</button>
+            <div><h2>Total Cost:</h2> ${{ getTotal() }}</div>
+            <button type="button" class="btn btn-success btn-lg" ng-click="gotocheckbtn()">Proceed to Checkout 
+                <span class="glyphicon glyphicon-credit-card" aria-hiddien="true"></span>
+            </button>
             </div>
         </div>
