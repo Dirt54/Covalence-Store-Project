@@ -90,7 +90,15 @@ angular.module('store.controllers', [])
             return total;
         }
        
-     
+
+
+        var elements = stripe.elements();
+        var card = elements.create('card');
+        card.mount('#card-field');
+    
+        $scope.errorMessage = '';
+
+        
 
         
     }]);

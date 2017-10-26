@@ -51,9 +51,9 @@
     </nav>
 </div>
 
-    
-        <form id="payment-form">
-            <div>Total: ${{ getTotal() }}</div>
+   
+        <!-- <form id="payment-form">
+            
             <span class="payment-errors"></span>
           
             <div class="form-row">
@@ -85,9 +85,9 @@
                       <input type="text" data-stripe="email">
                     </label>
                   </div>
-                
+                 -->
           
-            <div class="form-row">
+            <!-- <div class="form-row">
               <label>
                 <span>Billing ZIP Code</span>
                 <input type="text" size="6" data-stripe="address_zip">
@@ -95,7 +95,34 @@
             </div>
           
             <input type="submit" class="submit" value="Submit Payment">
-          </form>
+          </form> -->
+
+          <form class="my-form" ng-submit="processDonation()"> 
+              <div>Total: ${{ getTotal() }}</div>
+        
+                <div class="form-group">
+                    <label for="card-field">Credit Card</label>
+                    <div class="form-control" id="card-field"></div>
+                </div>
+                <div class="form-group">
+                    <label>Billing Address</label>
+                    <input class="form-control" type="text" placeholder="Cardholder Name" ng-model="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Line 1" ng-model="line1">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Line 2" ng-model="line2">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="City" ng-model="city">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="State" ng-model="state">
+                </div>
+                <div class="alert alert-danger" role="alert" ng-hide="errorMessage.length === 0">{{ errorMessage }}</div>
+                <input class="btn btn-info" type="submit" value="Submit Payment">
+            </form>
 
 
 

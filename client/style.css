@@ -89,3 +89,9 @@ h3 {
     left: 470px;
     font-size: 200%;
 }
+
+.my-form {
+    position: relative;
+    max-width: 450px;
+    left: 20%;
+}
