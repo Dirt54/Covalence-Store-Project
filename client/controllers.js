@@ -74,9 +74,23 @@ angular.module('store.controllers', [])
     }])
 
     .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeParams,  SEOService, CheckoutService) {
-    
-          
+        $scope.product = Products.query();
+        
+             
+         
+             $scope.shoppingCart = CheckoutService.checkoutItems;
+
+
+        $scope.getTotal = function() {
+            var total = 0;
+            for(var i = 0; i < $scope.shoppingCart.length; i++) {
+                var prod = $scope.shoppingCart[i];
+                total += (prod.price);
+            }
+            return total;
+        }
        
+     
 
         
     }]);
