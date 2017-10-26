@@ -1,15 +1,16 @@
+<div class="jumbotron"></div>
 <div class="wrapper container">
     <div class="header">
-        <img src="images/logo.svg" alt="logo"/>
-        <h1>Apparel</h1>
-    </div>
+            <h1>Apparel</h1>
    
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <!-- Just an image -->
         <a class="navbar-brand" href="#">
             <img src="images/logo.svg" width="163" height="55" alt="logo">
         </a>
-
+        
+            
+           
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>   
@@ -36,20 +37,19 @@
                 <li class="nav-item">
                     <a class="nav-link" id="nav" href="/cart">CART</a>
                 </li>
-
+                
             </ul>
-
+           
         </div>
-        
+       
     </nav>
-
+    
 </div>
 
 
 <!-- Below the nav bar -->
-
-
 <div class="apparel" ng-repeat="p in product" ng-click="singleRead(p.id)">
+       
     <img src="{{ p.imageurl }}" width="150" height="150">
     <h3>{{ p.title }}</h3>
     <p>${{ p.price }}</p>
