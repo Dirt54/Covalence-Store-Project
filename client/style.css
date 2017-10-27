@@ -5,10 +5,11 @@ body.wrapper {
       padding: 1px 0;
       }
 
-body { 
+/* body { 
 /* padding-top: 80px; */
-/* color: white; */
-}      
+/* color: white;
+} */
+
       
 ul {
     list-style-type: none;
@@ -40,8 +41,8 @@ li a:hover {
 }
 .card {
     position: relative; 
-    left: 2px;
-    color: rgb(37, 117, 163)
+    padding: 30px 30px;
+    color: rgb(37, 117, 163);
 
 }
 
@@ -62,7 +63,9 @@ li a:hover {
     background-size: cover;
     background-attachment: fixed;
     color: rgb(108, 147, 187);
-    padding: 200px;
+    min-height: 100vh;
+    /* padding: 300px; */
+
 }
 
 
@@ -79,15 +82,27 @@ li a:hover {
 h1 {
     font-family: 'Anton', sans-serif;
     margin-right: 10px;
+    font-size: 300%;
 }
 
 h2 {
-  font-family: 'Anton', sans-serif;  
+  font-family: 'Anton', sans-serif; 
+  font-size: 150%;
 }
 h3 {
     font-family: 'Gurajada';
-    
+    font-size: 250%;
 }
+h4 {
+    font-family: 'Lucida Sans';
+    font-size: 12pt;
+}
+    .header {
+     padding-left: 20vmin;
+     padding-top: 35vmin;
+
+ }   
+
 
 #costdiv {
     position: absolute;
@@ -96,7 +111,7 @@ h3 {
     font-size: 200%;
 }
     
-    .jumbotron{
+    .jumbotron {
 
         background-image:url('/images/covalence-store-apparel-hero.jpg');
         background-size:cover;
@@ -109,7 +124,8 @@ h3 {
         width: 150%;
         left: 200px; */
     }
-.jumbotron-d{
+
+.jumbotron-d {
     background-image:url('/images/covalence-store-misc-hero.jpg');
     background-size:cover;
     background-position:relative;

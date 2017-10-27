@@ -154,6 +154,7 @@ angular.module('store.controllers', [])
 
         $scope.stripeCharge = function() {
             stripe.createToken(card, {
+                email: $scope.email,
                 name: $scope.name,
                 address_line1: $scope.line1,
                 address_line2: $scope.line2,
@@ -169,7 +170,8 @@ angular.module('store.controllers', [])
                     var c = new CreatePayments({
                         token: result.token.id,
                         amount: $scope.getTotal(),
-                        cart: shoppingCart
+                        cart: shoppingCart,
+                        email: $scope.email
                     });
                     
                     c.$save(function() {
