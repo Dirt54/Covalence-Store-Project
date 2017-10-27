@@ -10,6 +10,10 @@ angular.module('onlinestore', ['ngRoute', 'ngResource', 'store.controllers', 'st
         templateUrl: 'views/apparel.html',
         controller: 'apparelController'
     })
+    .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'contactController'
+    })
     .when('/misc', {
         templateUrl: 'views/misc.html',
         controller: 'miscController'
