@@ -1,6 +1,5 @@
-var mailgun = require('mailgun-js');
-var api_key = 'pubkey-9d92cc3ada324040722a65cba293a055';
-var domain = 'https://app.mailgun.com/app/domains/sandboxe75c6a59859f4ee2a880007447749c2e.mailgun.org';
+var mailgun = require('mailgun-js')({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.DOMAIN_KEY });
+
 var from_who = 'covalencestore123@gmail.com';
 
 exports.sendEmail = function (toAddress) {
