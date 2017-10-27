@@ -92,7 +92,6 @@ angular.module('store.controllers', [])
             CheckoutService.checkoutItems.push(payload);
             console.log(CheckoutService.checkoutItems);
         }
-<<<<<<< HEAD
 
 
 
@@ -112,7 +111,6 @@ angular.module('store.controllers', [])
 
     .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeParams, SEOService, CheckoutService) {
         $scope.product = Products.query();
-=======
           
        
         SEOService.setSEO({        
@@ -131,7 +129,6 @@ angular.module('store.controllers', [])
              
          
              $scope.shoppingCart = CheckoutService.checkoutItems;
->>>>>>> a294bb73c36eb8a624c04da0ee7f2fbb1ba3620a
 
 
 
@@ -155,9 +152,6 @@ angular.module('store.controllers', [])
 
         $scope.errorMessage = '';
 
-<<<<<<< HEAD
-
-=======
         $scope.stripeCharge = function() {
             stripe.createToken(card, {
                 name: $scope.name,
@@ -195,5 +189,4 @@ angular.module('store.controllers', [])
             description: 'Purchase this cart'    
         });
         
->>>>>>> a294bb73c36eb8a624c04da0ee7f2fbb1ba3620a
     }]);
