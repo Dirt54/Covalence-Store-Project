@@ -13,8 +13,3 @@ angular.module('onlinestore.services', [])
     this.checkoutItems = [];
 })
 
-.service('EmailService', function() {
-    this.sendEmail = function(to, from, subject, body) {
-        //call email api
-    }
-});
