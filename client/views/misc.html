@@ -1,10 +1,10 @@
 <div class="jumbotron-d"></div>
 <div class="wrapper container">
     <div class="header">
-        
+
         <h1>Misc</h1>
     </div>
-   
+
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <!-- Just an image -->
         <a class="navbar-brand" href="#">
@@ -24,14 +24,18 @@
                 </li>
 
                 <li class="nav-item">
-                        <a class="nav-link" id="nav" href="/apparel">APPAREL</a>
-                    </li>
+                    <a class="nav-link" id="nav" href="/apparel">APPAREL</a>
+                </li>
 
                 <li class="nav-item active">
                     <a class="nav-link" id="nav" href="/misc">MISC</a>
 
-                <li class="nav-item">
-                    <a class="nav-link" id="nav" href="/cart">CART</a>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav" href="/cart">CART</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav" href="/contact">CONTACT</a>
                     </li>
             </ul>
         </div>
@@ -41,9 +45,9 @@
 
 <!-- Below the nav bar -->
 
-        <div class="apparel" ng-repeat="p in product" ng-click="singleRead(p.id)">
-            <img src="{{ p.imageurl }}" width="150" height="150">
-            <h3>{{ p.title }}</h3>
-            <p>${{ p.price }}</p>
-        </div>
-    </div>
+<div class="apparel" ng-repeat="p in product" ng-click="singleRead(p.id)">
+    <img src="{{ p.imageurl }}" width="150" height="150">
+    <h3>{{ p.title }}</h3>
+    <p>${{ p.price }}</p>
+</div>
+</div>
