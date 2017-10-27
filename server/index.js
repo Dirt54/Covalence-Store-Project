@@ -10,6 +10,8 @@ var cookieParser = require('cookie-parser');
 
 
 var prerender = require('prerender-node');
+prerender.set('prerenderToken', process.env.PRERENDER_KEY);
+app.use(prerender);
 
 app.use(express.static(clientPath));
 app.use(bodyParser.json());
