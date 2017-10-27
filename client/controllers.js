@@ -2,7 +2,12 @@ angular.module('store.controllers', [])
 
     .controller('welcomeController', ['$scope', '$location', '$routeParams', 'SEOService', function ($scope, $location, $routeparams, SEOService) {
 
-
+        SEOService.setSEO({        
+            title: 'Welcome',        
+            image: 'http://'+$location.host() +'/images/covalence-store-apparel-10.png',        
+            url: $location.url(),        
+            description: 'Welcome to the home page!'    
+        });
     }])
 
     .controller('apparelController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', function ($scope, Products, Purchases, $location, $routeparams, SEOService) {
@@ -11,6 +16,13 @@ angular.module('store.controllers', [])
         $scope.singleRead = function (x) {
             $location.path('/product/' + x);
         }
+
+        SEOService.setSEO({        
+            title: 'Apparel',        
+            image: 'http://'+$location.host() +'/images/covalence-store-apparel-10.png',        
+            url: $location.url(),        
+            description: 'Shop for some apparel'    
+        });
     }])
 
     .controller('miscController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', function ($scope, Products, Purchases, $location, $routeparams, SEOService) {
@@ -19,6 +31,13 @@ angular.module('store.controllers', [])
         $scope.singleRead = function (x) {
             $location.path('/product/' + x);
         }
+
+        SEOService.setSEO({        
+            title: 'Misc',        
+            image: 'http://'+$location.host() +'/images/covalence-store-apparel-10.png',        
+            url: $location.url(),        
+            description: 'Shop for some misc'    
+        });
     }])
 
     .controller('cartController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeparams, SEOService, CheckoutService) {
@@ -49,6 +68,12 @@ angular.module('store.controllers', [])
             $location.path('/checkout');
         }
 
+            SEOService.setSEO({        
+                title: 'Cart',        
+                image: 'http://'+$location.host() +'/images/covalence-store-apparel-10.png',        
+                url: $location.url(),        
+                description: 'Ready to purchase?'    
+            });
 
     }])
 
@@ -67,6 +92,7 @@ angular.module('store.controllers', [])
             CheckoutService.checkoutItems.push(payload);
             console.log(CheckoutService.checkoutItems);
         }
+<<<<<<< HEAD
 
 
 
@@ -86,6 +112,26 @@ angular.module('store.controllers', [])
 
     .controller('checkoutController', ['$scope', 'Products', 'Purchases', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, $location, $routeParams, SEOService, CheckoutService) {
         $scope.product = Products.query();
+=======
+          
+       
+        SEOService.setSEO({        
+            title: 'Product',        
+            image: 'http://'+$location.host() +'/images/covalence-store-apparel-10.png',        
+            url: $location.url(),        
+            description: 'Buy this product?'    
+        });
+        
+    }])
+
+    .controller('checkoutController', ['$scope', 'Products', 'Purchases', 'CreatePayments', '$location', '$routeParams', 'SEOService', 'CheckoutService', function ($scope, Products, Purchases, CreatePayments, $location, $routeParams,  SEOService, CheckoutService) {
+        $scope.product = Products.query();
+        
+        
+             
+         
+             $scope.shoppingCart = CheckoutService.checkoutItems;
+>>>>>>> a294bb73c36eb8a624c04da0ee7f2fbb1ba3620a
 
 
 
@@ -109,5 +155,45 @@ angular.module('store.controllers', [])
 
         $scope.errorMessage = '';
 
+<<<<<<< HEAD
 
+=======
+        $scope.stripeCharge = function() {
+            stripe.createToken(card, {
+                name: $scope.name,
+                address_line1: $scope.line1,
+                address_line2: $scope.line2,
+                address_city: $scope.city,
+                address_state: $scope.state
+            }).then(function(result) {
+                if (result.error) {
+                    $scope.errorMessage = result.error.message;
+                } else {
+                    // result.token is the card token (need id property)
+                    var shoppingCart = CheckoutService.checkoutItems;
+
+                    var c = new CreatePayments({
+                        token: result.token.id,
+                        amount: $scope.getTotal(),
+                        cart: shoppingCart
+                    });
+                    
+                    c.$save(function() {
+                        alert('Thank you for the payment, an email has been sent.');
+                        $location.path('/');
+                    }, function(err) {
+                        console.log(err);
+                    });
+                }
+            });
+        }
+
+        SEOService.setSEO({        
+            title: 'Checkout',        
+            image: 'http://'+$location.host() +'/images/covalence-store-apparel-10.png',        
+            url: $location.url(),        
+            description: 'Purchase this cart'    
+        });
+        
+>>>>>>> a294bb73c36eb8a624c04da0ee7f2fbb1ba3620a
     }]);
