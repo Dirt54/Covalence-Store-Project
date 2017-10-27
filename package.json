@@ -29,6 +29,7 @@
     "mysql": "^2.15.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "prerender-node": "^2.7.4"
+    "prerender-node": "^2.7.4",
+    "stripe": "^5.2.0"
   }
 }

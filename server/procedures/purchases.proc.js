@@ -7,3 +7,10 @@ exports.allPurchases = function() {
 exports.addPurchase = function(productid, price, stripeid) {
     return db.row('insertPurchase', [productid, price, stripeid]);
 }
+
+exports.insertPurchase = function(price, stripeid) {
+    return db.row('insertPurchases', [price, stripeid]);
+}
+exports.insertPurchProd = function(productid, purchaseid) {
+    return db.empty('insertPurchProd', [productid, purchaseid]);
+}

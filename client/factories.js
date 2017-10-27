@@ -11,12 +11,13 @@ angular.module('store.factories', [])
     }])
 
 
+
     .factory('Purchases', ['$resource', function ($resource) {
         return $resource('/api/purchases/:id');
     }])
 
-    .factory('CreatePurchases', ['$resource', function ($resource) {
-        return $resource('/api/purchases/:id', { id: '@id' }, {
+    .factory('CreatePayments', ['$resource', function ($resource) {
+        return $resource('/api/payment/:id', { id: '@id' }, {
             update: {
                 method: 'PUT'
             }

@@ -8,7 +8,7 @@ var router = express.Router();
 
 router.route("/")
 .get(function(req, res) {
-    procedures.allPrurchases()
+    procedures.allPurchases()
     .then(function(posts) {
         res.send(posts);
     })
