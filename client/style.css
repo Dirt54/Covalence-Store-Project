@@ -78,14 +78,16 @@ li a:hover {
 h1 {
     font-family: 'Anton', sans-serif;
     margin-right: 10px;
+    font-size: 300%;
 }
 
 h2 {
-  font-family: 'Anton', sans-serif;  
+  font-family: 'Anton', sans-serif; 
+  font-size: 150%;
 }
 h3 {
     font-family: 'Gurajada';
-    
+    font-size: 250%;
 }
 
 #costdiv {
