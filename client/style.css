@@ -40,8 +40,8 @@ li a:hover {
 }
 .card {
     position: relative; 
-    left: 2px;
-    color: rgb(37, 117, 163)
+    padding: 30px 30px;
+    color: rgb(37, 117, 163);
 
 }
 
@@ -62,7 +62,9 @@ li a:hover {
     background-size: cover;
     background-attachment: fixed;
     color: rgb(108, 147, 187);
-    padding: 200px;
+    min-height: 100vh;
+    /* padding: 300px; */
+
 }
 
 
@@ -79,6 +81,7 @@ li a:hover {
 h1 {
     font-family: 'Anton', sans-serif;
     margin-right: 10px;
+    font-size: 25pt;
 }
 
 h2 {
@@ -86,8 +89,18 @@ h2 {
 }
 h3 {
     font-family: 'Gurajada';
-    
+
 }
+h4 {
+    font-family: 'Lucida Sans';
+    font-size: 12pt;
+}
+    .header {
+     padding-left: 20vmin;
+     padding-top: 35vmin;
+
+ }   
+
 
 #costdiv {
     position: absolute;
