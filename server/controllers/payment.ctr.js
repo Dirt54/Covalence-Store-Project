@@ -1,6 +1,7 @@
 var express = require('express');
 var stripeSvc = require('../services/stripe.svc');
 var procedures = require('../procedures/purchases.proc')
+var emailSvc = require('../services/email.svc')
 var router = express.Router();
 
 router.post('/', function (req, res) {
@@ -17,6 +18,9 @@ router.post('/', function (req, res) {
                 promises.push(procedures.insertPurchProd(products[i].id, purchase.id));
             }
             return Promise.all(promises);
+        })
+        .then(function(purchase) {
+            return emailSvc.sendEmail(req.body.email)
         })
         .then(function (success) {
             res.sendStatus(204);
